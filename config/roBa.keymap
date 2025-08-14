@@ -63,6 +63,66 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+        css: css {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        altprsc: altprsc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp PSCRN>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        winl: winl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        cad: cad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_press &kp LCTL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp DEL>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTL>
+                ;
+        };
+        excel: excel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &kp LALT>
+                , <&macro_tap &kp J>
+                , <&macro_tap &kp P>
+                , <&macro_tap &kp S>https://github.com/doku4869/zmk-config-roBa.git
+                , <&macro_tap &kp Z>
+                , <&macro_tap &kp DEL>
+                , <&macro_tap &kp DEL>
+                , <&macro_tap &kp 7>
+                , <&macro_tap &kp ESC>
+                ;
+        };
     };
 
     behaviors {
@@ -74,6 +134,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        td_alt: td_alt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LALT LALT>, <&css>, <&altprsc>;
+        };
+        jkp: jp_key_press {
+            compatible = "zmk,behavior-jp-key-press";
+            #binding-cells = <1>;
+        };
     };
 
     keymap {
@@ -82,9 +152,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &jkp SQT       &kp H        &kp J  &kp K      &kp L    &jkp SEMI
+&kp Z             &kp X         &kp C         &kp V                        &kp B        &kp TAB                            &kp BSPC       &kp N        &kp M  &jkp COMMA &jkp DOT &jkp FSLH
+&kp LCTRL         &kp LEFT_WIN  &jkp LSHIFT   &jkp KC_IME                  &td_alt      &lt 1 SPACE                        &lt 2 RET      &lt 3 K_APP                           &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -111,8 +181,8 @@
         ARROW {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &jkp JPUS                &kp END  &trans      &bt BT_CLR  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &sys_reset  &trans  &trans  &trans  &trans  &trans
 &trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
             >;
 
