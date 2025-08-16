@@ -162,10 +162,10 @@
 
         FUNCTION {
             bindings = <
-&jkp N1 &jkp N2 &jkp N3  &jkp N4  &jkp N5                       &jkp N6  &jkp N7  &jkp N8  &jkp N9   &jkp N0
-&LSHIFT &kp DEL &kp LALT &kp LGUI &winl   &trans      &kp PG_UP &kp HOME &none    &kp UP   &none     &kp PRSC
-&cad    &trans  &trans   &trans   &excel  &trans      &kp PG_DN &kp END  &kp LEFT &kp DOWN &kp RIGHT &altprsc
-&trans  &trans  &trans   &trans   &trans  &trans      &trans    &trans                               &trans
+&jkp N1     &jkp N2 &jkp N3  &jkp N4  &jkp N5                       &jkp N6  &jkp N7  &jkp N8  &jkp N9   &jkp N0
+&jkp LSHIFT &kp DEL &kp LALT &kp LGUI &winl   &trans      &kp PG_UP &kp HOME &none    &kp UP   &none     &kp PRSC
+&cad        &trans  &trans   &trans   &excel  &trans      &kp PG_DN &kp END  &kp LEFT &kp DOWN &kp RIGHT &altprsc
+&trans      &trans  &trans   &trans   &trans  &trans      &trans    &trans                               &trans
             >;
         };
 
