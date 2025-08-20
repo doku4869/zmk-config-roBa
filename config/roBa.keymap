@@ -153,7 +153,7 @@
             tap-ms = <20>;
         };
         arrow_p: arrow-positive {
-            compatible = "zmk,behavior-sensor-rotate"";
+            compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&vol_alt_gui_n>, <&vol_alt_gui_p>;
             tap-ms = <20>;
