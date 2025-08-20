@@ -165,7 +165,7 @@
 &kp LCTRL         &jkp LSHIFT   &kp LEFT_WIN  &mt LSHIFT KC_IME            &lt 1 SPACE  &td_alt                            &lt 3 K_APP    &lt 2 RET                               &kp ESC
             >;
 
-            sensor-bindings = <<&encoder_msc_down_up>>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         FUNCTION {
