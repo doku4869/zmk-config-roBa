@@ -152,6 +152,12 @@
             // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
         };
+        arrow_p: arrow-positive {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LEFT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };       
     };
 
     keymap {
@@ -175,6 +181,8 @@
 &cad        &trans  &trans   &trans   &excel  &trans      &kp PG_DN &kp END  &kp LEFT &kp DOWN &kp RIGHT &altprsc
 &trans      &trans  &trans   &trans   &trans  &trans      &trans    &trans                               &trans
             >;
+
+            sensor-bindings = <&arrow_p>;
         };
 
         NUM {
