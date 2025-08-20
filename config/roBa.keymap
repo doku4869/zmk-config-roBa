@@ -154,7 +154,7 @@
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &jkp SQT       &kp H        &kp J  &kp K      &kp L    &jkp SEMI
 &kp Z             &kp X         &kp C         &kp V                        &kp B        &kp TAB                            &kp BSPC       &kp N        &kp M  &jkp COMMA &jkp DOT &jkp FSLH
-&kp LCTRL         &kp LEFT_WIN  &jkp LSHIFT   &mt LSHIFT KC_IME            &td_alt      &lt 1 SPACE                        &lt 2 RET      &lt 3 K_APP                             &kp ESC
+&kp LCTRL         &jkp LSHIFT   &kp LEFT_WIN  &mt LSHIFT KC_IME            &lt 1 SPACE  &td_alt                            &lt 3 K_APP    &lt 2 RET                               &kp ESC
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
