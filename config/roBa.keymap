@@ -47,7 +47,7 @@
         };
 
         double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&jkp SEMI>;
             key-positions = <20 21>;
         };
 
