@@ -199,6 +199,8 @@
 &none    &none   &none    &none     &none    &none                        &jkp BSPC &jkp UNDER &jkp PLUS       &jkp LBRC      &jkp RBRC             &jkp PIPE
 &trans   &trans  &trans   &trans    &trans   &trans                       &trans    &trans                                                          &jkp GRAV
             >;
+
+            sensor-bindings = <&scroll_left_right>;
         };
 
         ARROW {
