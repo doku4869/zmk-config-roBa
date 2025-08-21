@@ -116,7 +116,7 @@
                 = <&macro_tap &kp LALT>
                 , <&macro_tap &kp J>
                 , <&macro_tap &kp P>
-                , <&macro_tap &kp S>https://github.com/doku4869/zmk-config-roBa.git
+                , <&macro_tap &kp S>
                 , <&macro_tap &kp Z>
                 , <&macro_tap &kp DEL>
                 , <&macro_tap &kp DEL>
