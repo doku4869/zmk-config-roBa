@@ -190,8 +190,8 @@
         FUNCTION {
             bindings = <
 &jkp N1     &jkp N2 &jkp N3  &jkp N4  &jkp N5                       &jkp N6  &jkp N7  &jkp N8  &jkp N9   &jkp N0
-&jkp LSHIFT &kp DEL &kp LALT &kp LGUI &winl   &trans      &kp PG_UP &kp HOME &none    &kp UP   &none     &kp PRSC
-&cad        &trans  &trans   &trans   &excel  &trans      &kp PG_DN &kp END  &kp LEFT &kp DOWN &kp RIGHT &altprsc
+&jkp LSHIFT &kp DEL &kp LALT &kp LGUI &winl   &trans      &kp PRSC  &kp HOME &mkp MB1 &kp UP   &mkp MB2  &kp PG_UP
+&cad        &trans  &trans   &trans   &excel  &trans      &altprsc  &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
 &trans      &trans  &trans   &trans   &trans  &trans      &trans    &trans                               &trans
             >;
 
