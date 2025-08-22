@@ -120,7 +120,7 @@
                 , <&macro_tap &kp Z>
                 , <&macro_tap &kp DEL>
                 , <&macro_tap &kp DEL>
-                , <&macro_tap &kp 7>
+                , <&macro_tap &kp N7>
                 , <&macro_tap &kp ESC>
                 ;
         };
