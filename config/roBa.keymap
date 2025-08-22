@@ -162,7 +162,13 @@
         arrow_p: arrow-positive {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp RIGHT>;
+            bindings = <&kp RIGHT>, <&kp LEFT>;
+            tap-ms = <20>;
+        };       
+        volume_up_down: volume_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
             tap-ms = <20>;
         };       
     };
