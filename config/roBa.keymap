@@ -206,11 +206,11 @@
             tapping-term-ms = <200>;
             bindings = <&mt LALT LALT>, <&css>, <&altprsc>;
         };
-        paste: paste {
+        macro: macro {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&ctrlv>, <&winv>;
+            bindings = <&winv>, <&mute>;
         };
         jkp: jp_key_press {
             compatible = "zmk,behavior-jp-key-press";
@@ -251,7 +251,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R               &kp T                                           &kp Y      &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F               &kp G        &kp LS(LG(S))       &jkp SQT       &kp H      &kp J  &lt 5 K    &kp L    &jkp SEMI
-&kp Z             &kp X         &kp C         &kp V               &kp B        &mute               &kp K_APP      &kp N      &kp M  &jkp COMMA &jkp DOT &jkp FSLH
+&kp Z             &kp X         &kp C         &kp V               &kp B        &macro              &kp K_APP      &kp N      &kp M  &jkp COMMA &jkp DOT &jkp FSLH
 &kp LCTRL         &jkp LSHIFT   &kp LEFT_WIN  &mt LSHIFT KC_IME   &lt 1 SPACE  &td_alt             &lt 3 BSPC     &lt 2 RET                               &kp ESC
             >;
 
