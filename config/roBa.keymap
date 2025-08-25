@@ -250,7 +250,7 @@
             bindings = <
 &jkp N1     &jkp N2 &jkp N3  &jkp N4  &jkp N5                       &jkp N6  &jkp N7  &jkp N8  &jkp N9   &jkp N0
 &jkp LSHIFT &kp DEL &kp LALT &kp LGUI &winl   &trans      &kp PRSC  &kp HOME &mkp MB1 &kp UP   &mkp MB2  &kp PG_UP
-&kp LCTRL   &ctrlx  &ctrlc   &paste   &excel  &timestamp  &altprsc  &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
+&kp LCTRL   &ctrlx  &ctrlc   &ctrlv   &excel  &timestamp  &altprsc  &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
 &trans      &trans  &trans   &trans   &trans  &trans      &trans    &trans                               &trans
             >;
 
@@ -261,7 +261,7 @@
             bindings = <
 &kp EXCL &jkp AT &kp HASH &kp DLLR  &kp PRCT                                     &jkp CARET &jkp AMPERSAND  &jkp ASTERISK  &jkp LEFT_PARENTHESIS &jkp RIGHT_PARENTHESIS
 &none    &none   &none    &jkp CAPS &none    &kp LC(LA(KP_NUMBER_0))   &jkp TILD &jkp MINUS &jkp EQL        &jkp LBKT      &jkp RBKT             &jkp BSLH
-&none    &cad    &none    &none     &none    &none                     &jkp BSPC &jkp UNDER &jkp PLUS       &jkp LBRC      &jkp RBRC             &jkp PIPE
+&none    &cad    &none    &winv     &none    &none                     &jkp BSPC &jkp UNDER &jkp PLUS       &jkp LBRC      &jkp RBRC             &jkp PIPE
 &trans   &trans  &trans   &trans    &trans   &trans                    &trans    &trans                                                          &jkp GRAV
             >;
 
