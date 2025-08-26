@@ -32,6 +32,16 @@
     combos {
         compatible = "zmk,combos";
 
+        bspc {
+            bindings = <&jkp BSPC>;
+            key-positions = <8 9>;
+        };
+
+        shift {
+            bindings = <&jkp LSHIFT>;
+            key-positions = <10 11>;
+        };
+
         tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
@@ -42,11 +52,6 @@
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         double_quotation {
             bindings = <&jkp SQT>;
             key-positions = <20 21>;
@@ -55,6 +60,11 @@
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
+        };
+        
+        ctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <32 33>;
         };
     };
 
@@ -252,7 +262,7 @@
 &kp Q             &kp W         &kp E         &kp R               &kp T                                           &kp Y      &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F               &kp G        &kp LS(LG(S))       &jkp SQT       &kp H      &kp J  &lt 5 K    &kp L    &jkp SEMI
 &kp Z             &kp X         &kp C         &kp V               &kp B        &macro              &kp K_APP      &kp N      &kp M  &jkp COMMA &jkp DOT &jkp FSLH
-&kp LCTRL         &jkp LSHIFT   &kp LEFT_WIN  &mt LSHIFT KC_IME   &lt 1 SPACE  &td_alt             &lt 3 BSPC     &lt 2 RET                               &kp ESC
+&kp LCTRL         &jkp LSHIFT   &kp LEFT_WIN  &mt LSHIFT KC_IME   &lt 1 SPACE  &td_alt             &lt 6 BSPC     &lt 2 RET                               &kp ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -311,11 +321,13 @@
 
         layer_6 {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R            &kp T                                                 &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F            &kp G        &kp LS(LG(S))             &jkp SQT       &kp H        &kp J  &lt 5 K    &kp L    &jkp SEMI
-&kp Z             &kp X         &kp C         &kp V            &kp B        &kp TAB                   &kp K_APP      &kp N        &kp M  &jkp COMMA &jkp DOT &jkp FSLH
-&kp LCTRL         &jkp LSHIFT   &kp LEFT_WIN  &mt LSHIFT CAPS  &lt 1 SPACE  &td_alt                   &lt 3 BSPC     &lt 2 RET                               &kp ESC
+&kp F1  &kp F2  &kp F3  &kp F4     &kp F5                        &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+&none   &none   &none   &jkp JPUS  &trans   &trans      &kp F12  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0
+&none   &none   &none   &none      &trans   &trans      &kp F11  &out OUT_TOG   &trans         &trans         &trans         &sys_reset
+&trans  &trans  &trans  &trans     &trans   &trans      &trans   &trans                                                      &bt BT_CLR
             >;
+
+            sensor-bindings = <&volume_up_down>;
         };
     };
 };
