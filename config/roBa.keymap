@@ -66,6 +66,11 @@
             bindings = <&kp LCTRL>;
             key-positions = <32 33>;
         };
+        
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <33 42>;
+        };
     };
 
     macros {
