@@ -155,6 +155,15 @@
                 , <&macro_tap &kp ESC>
                 ;
         };
+        v_excel: v_excel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &ctrlv>
+                , <&macro_tap &excel>
+                ;
+        };
         winv: winv {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -290,10 +299,10 @@
 
         FUNCTION {
             bindings = <
-&jkp N1     &jkp N2 &jkp N3  &jkp N4  &jkp N5                       &jkp N6  &jkp N7  &jkp N8  &jkp N9   &jkp N0
-&jkp LSHIFT &kp DEL &kp LALT &kp LGUI &winl   &trans      &kp PRSC  &kp HOME &mkp MB1 &kp UP   &mkp MB2  &kp PG_UP
-&kp LCTRL   &ctrlx  &ctrlc   &ctrlv   &excel  &timestamp  &altprsc  &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
-&trans      &trans  &trans   &trans   &trans  &trans      &trans    &trans                               &trans
+&jkp N1     &jkp N2 &jkp N3  &jkp N4  &jkp N5                         &jkp N6  &jkp N7  &jkp N8  &jkp N9   &jkp N0
+&jkp LSHIFT &kp DEL &kp LALT &kp LGUI &winl     &trans      &kp PRSC  &kp HOME &mkp MB1 &kp UP   &mkp MB2  &kp PG_UP
+&kp LCTRL   &ctrlx  &ctrlc   &ctrlv   &v_excel  &timestamp  &altprsc  &kp END  &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN
+&trans      &excel  &trans   &trans   &trans    &trans      &trans    &trans                               &trans
             >;
 
             sensor-bindings = <&arrow_p>;
