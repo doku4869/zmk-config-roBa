@@ -193,7 +193,7 @@
                 , <&macro_tap &jkp SEMI>
                 , <&macro_release &jkp LSHIFT>
                 , <&macro_release &kp LCTL>
-                , <&macro_release &kp tab>
+                , <&macro_tap &kp tab>
                 ;
         };
         ctrlv: ctrlv {
