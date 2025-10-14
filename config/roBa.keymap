@@ -164,6 +164,15 @@
                 , <&macro_tap &excel>
                 ;
         };
+        release: release {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &timestamp>
+                , <&macro_tap &css>
+                ;
+        };
         winv: winv {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -312,7 +321,7 @@
             bindings = <
 &kp EXCL &jkp AT &kp HASH &kp DLLR  &kp PRCT                                     &jkp CARET &jkp AMPERSAND  &jkp ASTERISK  &jkp LEFT_PARENTHESIS &jkp RIGHT_PARENTHESIS
 &none    &none   &none    &jkp CAPS &none    &kp LC(LA(KP_NUMBER_0))   &jkp TILD &jkp MINUS &jkp EQL        &jkp LBKT      &jkp RBKT             &jkp BSLH
-&none    &cad    &none    &winv     &none    &none                     &jkp BSPC &jkp UNDER &jkp PLUS       &jkp LBRC      &jkp RBRC             &jkp PIPE
+&none    &cad    &none    &winv     &release    &none                     &jkp BSPC &jkp UNDER &jkp PLUS       &jkp LBRC      &jkp RBRC             &jkp PIPE
 &trans   &trans  &trans   &trans    &trans   &trans                    &trans    &trans                                                          &jkp GRAV
             >;
 
