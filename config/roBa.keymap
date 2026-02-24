@@ -248,13 +248,49 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        exevim: exevim {
+        at_w: at_w {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <100>;
             bindings
                 = <&macro_tap &jkp AT>
-                , <&macro_tap &jkp AT>
+                , <&macro_tap &jkp W>
+                ;
+        };
+        at_q: at_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &jkp AT>
+                , <&macro_tap &jkp Q>
+                ;
+        };
+        at_e: at_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &jkp AT>
+                , <&macro_tap &jkp E>
+                ;
+        };
+        at_r: at_r {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &jkp AT>
+                , <&macro_tap &jkp R>
+                ;
+        };
+        gg: gg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings
+                = <&macro_tap &jkp G>
+                , <&macro_tap &jkp G>
                 ;
         };
         mute: mute {
@@ -340,8 +376,8 @@
         
         macro1_layer {
             bindings = <
-&none             &exevim             &none         &none               &none                                           &none      &none     &none         &none     &none
-&none             &ctrls              &none         &format             &none        &kp LS(LG(S))       &jkp SQT       &none      &mkp MB1  &lt 6 K  &mkp MB2  &none
+&at_q             &at_w               &at_e         &at_r               &none                                           &none      &none     &none         &none     &none
+&none             &ctrls              &none         &format             &gg          &kp LS(LG(S))       &jkp SQT       &none      &mkp MB1  &lt 6 K  &mkp MB2  &none
 &none             &none               &none         &none               &none        &macro              &kp K_APP      &none      &none     &none         &none     &none
 &kp LCTRL         &tog 1    &kp LEFT_WIN  &mt LSHIFT KC_IME   &lt 2 SPACE  &td_alt   &lt 7 BSPC  &lt 3 RET                           &kp ESC
             >;
