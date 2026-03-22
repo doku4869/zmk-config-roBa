@@ -6,6 +6,10 @@
 #include <dt-bindings/zmk/dynamic_macro.h>
 #include <input/processors.dtsi>
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define KC_SET_US (ZMK_HID_USAGE(HID_USAGE_KEY, 0xF8))
+#define KC_SET_JP (ZMK_HID_USAGE(HID_USAGE_KEY, 0xF9))
+#define KC_APPLE_ON (ZMK_HID_USAGE(HID_USAGE_KEY, 0xFA))
+#define KC_APPLE_OFF (ZMK_HID_USAGE(HID_USAGE_KEY, 0xFB))
 
 &mt {
     flavor = "balanced";
@@ -311,6 +315,36 @@
                 , <&macro_release &kp LEFT_WIN>
                 ;
         };
+        bt_win_0: bt_win_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings = <&bt BT_SEL 0 &jkp KC_APPLE_OFF>;
+        };
+        bt_win_1: bt_win_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings = <&bt BT_SEL 1 &jkp KC_APPLE_OFF>;
+        };
+        bt_win_2: bt_win_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings = <&bt BT_SEL 2 &jkp KC_APPLE_OFF>;
+        };
+        bt_mac_3: bt_mac_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings = <&bt BT_SEL 3 &jkp KC_SET_US &jkp KC_APPLE_ON>;
+        };
+        bt_mac_4: bt_mac_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            bindings = <&bt BT_SEL 4 &jkp KC_SET_US &jkp KC_APPLE_ON>;
+        };
     };
 
     behaviors {
@@ -416,7 +450,7 @@
         ARROW {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4     &kp F5                        &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
-&none   &none   &none   &jkp JPUS  &trans   &trans      &kp F12  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0
+&none   &none   &none   &jkp JPUS  &trans   &trans      &kp F12  &bt_mac_4      &bt_mac_3      &bt_win_2      &bt_win_1      &bt_win_0
 &none   &none   &none   &none      &trans   &trans      &kp F11  &out OUT_TOG   &trans         &trans         &trans         &sys_reset
 &trans  &trans  &trans  &trans     &trans   &trans      &trans   &trans                                                      &bt BT_CLR
             >;
@@ -445,7 +479,7 @@
         layer_6 {
             bindings = <
 &kp F1          &kp F2          &kp F3          &kp F4     &kp F5                                 &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
-&dm DM_REC 0    &dm DM_REC 1    &dm DM_STP 0    &jkp JPUS  &jkp KC_SET_PER   &trans      &kp F12  &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0
+&dm DM_REC 0    &dm DM_REC 1    &dm DM_STP 0    &jkp JPUS  &jkp KC_SET_PER   &trans      &kp F12  &bt_mac_4      &bt_mac_3      &bt_win_2      &bt_win_1      &bt_win_0
 &dm DM_PLY 0    &dm DM_PLY 1    &none           &none      &trans            &trans      &kp F11  &out OUT_TOG   &trans         &trans         &trans         &sys_reset
 &trans          &trans          &trans          &trans     &trans            &trans      &trans   &trans                                                      &bt BT_CLR
             >;
